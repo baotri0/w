@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="app">
+    <div class="col-2">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Login</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#">Connect</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#">Disconnect</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-10 control-group">
+        <div class="col-3">
+            <div class="date">
+                <h6>Time: </h6><span>10:23:22</span>
+            </div>
+            <div class = "date">
+                <h6>Day: </h6><span>10:23:22</span>
+            </div>
+            <div class="range-group">
+                <div class="temperature-control">
+                    <label for="temperature-range">Temperature:</label>
+                    <input type="range" id="temperature-range" min="0" max="100" step="1" value="20">
+                    <output for="temperature-range" id="temperature-output">20</output>
+                </div>
+                <div class="water-level-control">
+                    <label for="water-level-range">Water Level:</label>
+                    <input type="range" id="water-level-range" min="0" max="100" step="1" value="50">
+                    <output for="water-level-range" id="water-level-output">50</output>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2 class="tank-name">Tank</h2>
+            <div class="tank">
+                <div class="water"></div>
+            </div>
+            <h5 id="level-water">50%</h5>
+        </div>
+    </div>
+</div>
